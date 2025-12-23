@@ -2,40 +2,48 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingressos EC Paraibano</title>
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+<script>
+let qtd = 0;
+let total = 0;
 
+function vender(valor) {
+  qtd++;
+  total += valor;
+
+  document.getElementById("qtd").innerText = qtd;
+  document.getElementById("total").innerText = total;
+}
+</script>
 <body>
 
-  <header class="topo">
-    <h1>Ingressos EC Paraibano</h1>
-    <p>Simulação de vendas – projeto virtual</p>
-  </header>
+<div class="container">
 
-  <main class="container">
+  <h1>Ingressos EC Paraibano</h1>
 
-    <h2>Sombra</h2>
-    <button onclick="comprar(50)">Inteira R$50</button>
-    <button onclick="comprar(25)">Meia R$25</button>
-    <button onclick="comprar(30)">Social R$30</button>
-    <button onclick="comprar(10)">Sócio Torcedor R$10</button>
+  <h2>Sombra</h2>
+  <button onclick="vender(50)">Inteira R$50</button>
+  <button onclick="vender(25)">Meia R$25</button>
+  <button onclick="vender(30)">Social R$30</button>
+  <button onclick="vender(10)">Sócio Torcedor R$10</button>
 
-    <h2>Cadeiras</h2>
-    <button onclick="comprar(150)">Inteira R$150</button>
-    <button onclick="comprar(75)">Meia R$75</button>
-    <button onclick="comprar(80)">Social R$80</button>
-    <button onclick="comprar(30)">Sócio Torcedor R$30</button>
+  <h2>Cadeiras</h2>
+  <button onclick="vender(150)">Inteira R$150</button>
+  <button onclick="vender(75)">Meia R$75</button>
+  <button onclick="vender(80)">Social R$80</button>
+  <button onclick="vender(30)">Sócio Torcedor R$30</button>
 
-    <p class="info">Mulheres e crianças até 12 anos não pagam</p>
+  <div class="painel">
+    <p>Ingressos vendidos: <span id="qtd">0</span></p>
+    <p>Renda total: R$ <span id="total">0</span></p>
+  </div>
+<p>Ingressos vendidos: <span id="vendidos">0</span></p>
+<p>Renda total: R$ <span id="renda">0</span></p>
+</div>
 
-    <hr>
-
-    <p>Ingressos vendidos: <strong><span id="vendidos">0</span></strong></p>
-    <p>Renda total: <strong>R$ <span id="renda">0</span></strong></p>
-
-  </main>
-
-  <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
-</html> 
+</html>
