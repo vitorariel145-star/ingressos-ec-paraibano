@@ -1,67 +1,39 @@
 body {
-  margin: 0;
+  background: #0b2d5c;
+  color: white;
   font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: #fff;
+  margin: 0;
 }
 
-header {
-  padding: 20px;
+.container {
+  padding: 15px;
   text-align: center;
-  background: #001f4d;
 }
 
-.card {
-  max-width: 500px;
-  margin: 20px auto;
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
+h1 {
+  margin-top: 10px;
 }
 
-h2, h3 {
-  margin-top: 20px;
-}
-
-.botoes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+h2 {
+  margin-top: 25px;
 }
 
 button {
-  padding: 10px 14px;
-  border: none;
-  border-radius: 6px;
-  background: #005eff;
-  color: #fff;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background: #003fa3;
-}
-
-#comprarBtn {
   width: 100%;
-  margin-top: 20px;
+  padding: 14px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 10px;
   font-size: 16px;
-  background: #00c853;
+  font-weight: bold;
+  background: white;
+  color: #0b2d5c;
 }
 
-#comprarBtn:hover {
-  background: #009624;
-}
-
-.info {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #ccc;
-}
-
-.rodape {
-  font-size: 12px;
-  color: #888;
-  margin-top: 15px;
+.painel {
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-size: 18px;
 }
