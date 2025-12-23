@@ -1,7 +1,6 @@
 let vendidos = 0;
 
-function vender() {
+function comprar() {
   vendidos++;
-  document.getElementById("status").innerText =
-    "Ingressos vendidos: " + vendidos;
+  document.getElementById("contador").innerText = vendidos;
 }
