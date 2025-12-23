@@ -8,43 +8,38 @@
 
 <body>
 
-  <header>
-    <h1>Ingressos EC Paraibano</h1>
-    <p>Simulação de vendas – projeto virtual</p>
-  </header>
+<header>
+  <img src="logo.png" alt="EC Paraibano" class="logo">
+  <h1>Ingressos EC Paraibano</h1>
+  <p>Simulação de vendas – projeto virtual</p>
+</header>
 
-  <main>
-    <div class="card">
-      <h2>EC Paraibano x Auto Esporte</h2>
-      <p>Data: 24/12</p>
+<main>
+  <div class="card">
+    <h2>EC Paraibano x Auto Esporte</h2>
+    <p><strong>Data:</strong> 24/12</p>
 
-      <h3>Sombra</h3>
-      <ul>
-        <li>Inteira: R$ 50</li>
-        <li>Meia: R$ 25</li>
-        <li>Social: R$ 30</li>
-        <li>Sócio Torcedor: R$ 10</li>
-      </ul>
-
-      <h3>Cadeiras</h3>
-      <ul>
-        <li>Inteira: R$ 150</li>
-        <li>Meia: R$ 75</li>
-        <li>Social: R$ 80</li>
-        <li>Sócio Torcedor: R$ 30</li>
-      </ul>
-
-      <p class="gratis">Mulheres e crianças até 12 anos não pagam</p>
-
-      <button onclick="comprar()">Comprar ingresso</button>
-      <p>Ingressos vendidos: <span id="contador">0</span></p>
-
-      <p style="font-size:12px;opacity:0.7;">
-        Venda fictícia • Projeto virtual
-      </p>
+    <h3>Escolha o setor</h3>
+    <div class="grid">
+      <button onclick="selecionarSetor('Sombra')">Sombra</button>
+      <button onclick="selecionarSetor('Cadeiras')">Cadeiras</button>
     </div>
-  </main>
 
-  <script src="main.js"></script>
+    <h3>Tipo de ingresso</h3>
+    <div class="grid">
+      <button onclick="comprar('Inteira')">Inteira</button>
+      <button onclick="comprar('Meia')">Meia</button>
+      <button onclick="comprar('Social')">Social</button>
+      <button onclick="comprar('Sócio')">Sócio Torcedor</button>
+    </div>
+
+    <p class="info">Mulheres e crianças até 12 anos não pagam</p>
+
+    <p id="status">Ingressos vendidos: 0</p>
+    <small>Venda fictícia • Projeto virtual</small>
+  </div>
+</main>
+
+<script src="main.js"></script>
 </body>
 </html>
