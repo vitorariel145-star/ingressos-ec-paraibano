@@ -1,51 +1,46 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0b1c2d; /* azul escuro */
-  color: white;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ingressos EC Paraibano</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
 
-header {
-  background-color: #0d47a1;
-  padding: 20px;
-  text-align: center;
-}
+<body>
 
-h1 {
-  margin: 0;
-}
+<header>
+  <img src="logo.png" alt="EC Paraibano" class="logo">
+  <h1>Ingressos EC Paraibano</h1>
+  <p>Simulação de vendas – projeto virtual</p>
+</header>
 
-main {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
+<main>
+  <div class="card">
+    <h2>EC Paraibano x Auto Esporte</h2>
+    <p><strong>Data:</strong> 24/12</p>
 
-.card {
-  background-color: #111;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-}
+    <h3>Escolha o setor</h3>
+    <div class="grid">
+      <button onclick="selecionarSetor('Sombra')">Sombra</button>
+      <button onclick="selecionarSetor('Cadeiras')">Cadeiras</button>
+    </div>
 
-button {
-  background-color: #1976d2;
-  color: white;
-  border: none;
-  padding: 12px;
-  width: 100%;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-}
+    <h3>Tipo de ingresso</h3>
+    <div class="grid">
+      <button onclick="comprar('Inteira')">Inteira</button>
+      <button onclick="comprar('Meia')">Meia</button>
+      <button onclick="comprar('Social')">Social</button>
+      <button onclick="comprar('Sócio')">Sócio Torcedor</button>
+    </div>
 
-button:hover {
-  background-color: #1565c0;
-}
+    <p class="info">Mulheres e crianças até 12 anos não pagam</p>
 
-small {
-  display: block;
-  margin-top: 15px;
-  opacity: 0.7;
-}
+    <p id="status">Ingressos vendidos: 0</p>
+    <small>Venda fictícia • Projeto virtual</small>
+  </div>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
+
