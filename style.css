@@ -35,3 +35,20 @@ button {
   font-size: 16px;
   border-radius: 5px;
 }
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  background: #0a2e66;
+  margin: 6px 0;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.gratis {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #00ffcc;
+}
