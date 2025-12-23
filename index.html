@@ -2,46 +2,46 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingressos EC Paraibano</title>
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+<script>
+let qtd = 0;
+let total = 0;
+
+function vender(valor) {
+  qtd++;
+  total += valor;
+
+  document.getElementById("qtd").innerText = qtd;
+  document.getElementById("total").innerText = total;
+}
+</script>
 <body>
 
-<header>
+<div class="container">
+
   <h1>Ingressos EC Paraibano</h1>
-  <p>Simulação de vendas – projeto virtual</p>
-</header>
 
-<main class="card">
-  <h2>EC Paraibano x Auto Esporte</h2>
-  <p><strong>Data:</strong> 24/12</p>
+  <h2>Sombra</h2>
+  <button onclick="vender(50)">Inteira R$50</button>
+  <button onclick="vender(25)">Meia R$25</button>
+  <button onclick="vender(30)">Social R$30</button>
+  <button onclick="vender(10)">Sócio Torcedor R$10</button>
 
-  <h3>Escolha o setor</h3>
-  <div class="botoes">
-    <button onclick="selecionarSetor('Sombra')">Sombra</button>
-    <button onclick="selecionarSetor('Cadeiras')">Cadeiras</button>
+  <h2>Cadeiras</h2>
+  <button onclick="vender(150)">Inteira R$150</button>
+  <button onclick="vender(75)">Meia R$75</button>
+  <button onclick="vender(80)">Social R$80</button>
+  <button onclick="vender(30)">Sócio Torcedor R$30</button>
+
+  <div class="painel">
+    <p>Ingressos vendidos: <span id="qtd">0</span></p>
+    <p>Renda total: R$ <span id="total">0</span></p>
   </div>
 
-  <h3>Tipo de ingresso</h3>
-  <div class="botoes">
-    <button onclick="selecionarTipo('Inteira', 50)">Inteira</button>
-    <button onclick="selecionarTipo('Meia', 25)">Meia</button>
-    <button onclick="selecionarTipo('Social', 30)">Social</button>
-    <button onclick="selecionarTipo('Sócio Torcedor', 10)">Sócio Torcedor</button>
-  </div>
-
-  <p class="info">Mulheres e crianças até 12 anos não pagam</p>
-
-  <div id="resumo"></div>
-
-  <!-- BOTÃO ESCONDIDO -->
-  <button id="comprarBtn" onclick="comprar()" style="display:none">
-    Comprar ingresso
-  </button>
-
-  <p id="status">Ingressos vendidos: 0</p>
-  <p class="rodape">Venda fictícia • Projeto virtual</p>
-</main>
+</div>
 
 <script src="main.js"></script>
 </body>
