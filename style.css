@@ -1,46 +1,69 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Ingressos EC Paraibano</title>
-  <link rel="stylesheet" href="estilo.css">
-</head>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0b1c2d;
+  color: white;
+}
 
-<body>
+header {
+  background: linear-gradient(90deg, #0d47a1, #1565c0);
+  text-align: center;
+  padding: 20px;
+}
 
-<header>
-  <img src="logo.png" alt="EC Paraibano" class="logo">
-  <h1>Ingressos EC Paraibano</h1>
-  <p>Simulação de vendas – projeto virtual</p>
-</header>
+.logo {
+  width: 90px;
+  margin-bottom: 10px;
+}
 
-<main>
-  <div class="card">
-    <h2>EC Paraibano x Auto Esporte</h2>
-    <p><strong>Data:</strong> 24/12</p>
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
 
-    <h3>Escolha o setor</h3>
-    <div class="grid">
-      <button onclick="selecionarSetor('Sombra')">Sombra</button>
-      <button onclick="selecionarSetor('Cadeiras')">Cadeiras</button>
-    </div>
+.card {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
 
-    <h3>Tipo de ingresso</h3>
-    <div class="grid">
-      <button onclick="comprar('Inteira')">Inteira</button>
-      <button onclick="comprar('Meia')">Meia</button>
-      <button onclick="comprar('Social')">Social</button>
-      <button onclick="comprar('Sócio')">Sócio Torcedor</button>
-    </div>
+h2, h3 {
+  text-align: center;
+}
 
-    <p class="info">Mulheres e crianças até 12 anos não pagam</p>
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
 
-    <p id="status">Ingressos vendidos: 0</p>
-    <small>Venda fictícia • Projeto virtual</small>
-  </div>
-</main>
+button {
+  background-color: #1976d2;
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-<script src="main.js"></script>
-</body>
-</html>
+button:hover {
+  background-color: #1565c0;
+}
 
+.info {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+#status {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
