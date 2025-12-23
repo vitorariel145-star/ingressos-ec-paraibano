@@ -5,39 +5,42 @@
   <title>Ingressos EC Paraibano</title>
   <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
 
 <header>
-  <img src="logo.png" alt="EC Paraibano" class="logo">
   <h1>Ingressos EC Paraibano</h1>
   <p>Simulação de vendas – projeto virtual</p>
 </header>
 
-<main>
-  <div class="card">
-    <h2>EC Paraibano x Auto Esporte</h2>
-    <p><strong>Data:</strong> 24/12</p>
+<main class="card">
+  <h2>EC Paraibano x Auto Esporte</h2>
+  <p><strong>Data:</strong> 24/12</p>
 
-    <h3>Escolha o setor</h3>
-    <div class="grid">
-      <button onclick="selecionarSetor('Sombra')">Sombra</button>
-      <button onclick="selecionarSetor('Cadeiras')">Cadeiras</button>
-    </div>
-
-    <h3>Tipo de ingresso</h3>
-    <div class="grid">
-      <button onclick="comprar('Inteira')">Inteira</button>
-      <button onclick="comprar('Meia')">Meia</button>
-      <button onclick="comprar('Social')">Social</button>
-      <button onclick="comprar('Sócio')">Sócio Torcedor</button>
-    </div>
-
-    <p class="info">Mulheres e crianças até 12 anos não pagam</p>
-
-    <p id="status">Ingressos vendidos: 0</p>
-    <small>Venda fictícia • Projeto virtual</small>
+  <h3>Escolha o setor</h3>
+  <div class="botoes">
+    <button onclick="selecionarSetor('Sombra')">Sombra</button>
+    <button onclick="selecionarSetor('Cadeiras')">Cadeiras</button>
   </div>
+
+  <h3>Tipo de ingresso</h3>
+  <div class="botoes">
+    <button onclick="selecionarTipo('Inteira', 50)">Inteira</button>
+    <button onclick="selecionarTipo('Meia', 25)">Meia</button>
+    <button onclick="selecionarTipo('Social', 30)">Social</button>
+    <button onclick="selecionarTipo('Sócio Torcedor', 10)">Sócio Torcedor</button>
+  </div>
+
+  <p class="info">Mulheres e crianças até 12 anos não pagam</p>
+
+  <div id="resumo"></div>
+
+  <!-- BOTÃO ESCONDIDO -->
+  <button id="comprarBtn" onclick="comprar()" style="display:none">
+    Comprar ingresso
+  </button>
+
+  <p id="status">Ingressos vendidos: 0</p>
+  <p class="rodape">Venda fictícia • Projeto virtual</p>
 </main>
 
 <script src="main.js"></script>
